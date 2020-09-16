@@ -1,16 +1,40 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React, { useEffect, useReducer } from 'react';
+import './App.css';
+import { getStatus } from './api/api';
+import { API_LIST } from './constants';
+import reducer from './reducer';
+import { RECEIVED_STATUS, STATUS_OK, STATUS_OUTAGE } from './actions';
 
-function App() {
+const initialState = { apis: {}, outages: [] };
+
+const App = () => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  useEffect(() => {
+    API_LIST.forEach((api) => {
+      getStatus(api).then((apiStatus) => {
+        dispatch({ type: RECEIVED_STATUS, apiName: api, status: apiStatus });
+        if (apiStatus?.success !== true) {
+          dispatch({ type: STATUS_OUTAGE, apiName: api });
+        }
+        if (apiStatus?.success === true) {
+          dispatch({ type: STATUS_OK, apiName: api });
+        }
+      });
+    });
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Statusaurus</p>
-      </header>
+    <div>
+      <h1>Statusaurus</h1>
+      <p>{`Current Outages(${state.outages.length}): [${state.outages.join(
+        ', '
+      )}]`}</p>
+      {Object.keys(state.apis).map((apiName) => (
+        <p key={apiName}>{apiName}</p>
+      ))}
     </div>
   );
-}
+};
 
 export default App;
