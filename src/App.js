@@ -1,20 +1,28 @@
-import React, { useEffect } from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import { getStatus } from './api/api';
 import { API_LIST } from './constants';
 
 const App = () => {
+  const [statuses, setStatuses] = useState({});
+
   useEffect(() => {
-    getStatus(API_LIST[0]);
+    API_LIST.forEach((api) => {
+      getStatus(api).then((apiStatus) => {
+        setStatuses((existing) => ({
+          ...existing,
+          [api]: apiStatus,
+        }));
+      });
+    });
   }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Statusaurus</p>
-      </header>
+    <div>
+      <h1>Statusaurus</h1>
+      {Object.keys(statuses).map((apiName) => (
+        <p key={apiName}>{apiName}</p>
+      ))}
     </div>
   );
 };

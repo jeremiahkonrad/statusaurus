@@ -6,7 +6,7 @@ export const API_LIST = [
   'devices',
   'documents',
   'forms',
-  'invites',
+  'invites', // this is the downed API
   'media',
   'messages',
   'namespaces',
