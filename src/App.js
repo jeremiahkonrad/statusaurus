@@ -5,6 +5,7 @@ import { API_LIST } from './constants';
 import reducer from './reducer';
 import { RECEIVED_STATUS, STATUS_OK, STATUS_OUTAGE } from './actions';
 import Outages from './components/outages/outages';
+import TableRow from './components/table/table-row/table-row';
 
 const initialState = { apis: {}, outages: [] };
 
@@ -29,9 +30,11 @@ const App = () => {
     <div>
       <h1>Statusaurus</h1>
       <Outages outages={state.outages} />
-      {Object.keys(state.apis).map((apiName) => (
-        <p key={apiName}>{apiName}</p>
-      ))}
+      <table>
+        {Object.keys(state.apis).map((apiName) => (
+          <TableRow api={apiName} status={state.apis[apiName]} />
+        ))}
+      </table>
     </div>
   );
 };
