@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/pics-subreddit/static/css/main.5f361e03.chunk.css",
+    "main.js": "/pics-subreddit/static/js/main.ef693b1b.chunk.js",
+    "main.js.map": "/pics-subreddit/static/js/main.ef693b1b.chunk.js.map",
+    "runtime-main.js": "/pics-subreddit/static/js/runtime-main.7b26a0bb.js",
+    "runtime-main.js.map": "/pics-subreddit/static/js/runtime-main.7b26a0bb.js.map",
+    "static/js/2.bc85caa6.chunk.js": "/pics-subreddit/static/js/2.bc85caa6.chunk.js",
+    "static/js/2.bc85caa6.chunk.js.map": "/pics-subreddit/static/js/2.bc85caa6.chunk.js.map",
+    "index.html": "/pics-subreddit/index.html",
+    "precache-manifest.c1db76f0c4967c8b7110fc170d1b26ef.js": "/pics-subreddit/precache-manifest.c1db76f0c4967c8b7110fc170d1b26ef.js",
+    "service-worker.js": "/pics-subreddit/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/pics-subreddit/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.bc85caa6.chunk.js.LICENSE.txt": "/pics-subreddit/static/js/2.bc85caa6.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/pics-subreddit/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7b26a0bb.js",
+    "static/js/2.bc85caa6.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.ef693b1b.chunk.js"
+  ]
+}
