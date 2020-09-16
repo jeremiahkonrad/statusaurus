@@ -4,6 +4,7 @@ import { getStatus } from './api/api';
 import { API_LIST } from './constants';
 import reducer from './reducer';
 import { RECEIVED_STATUS, STATUS_OK, STATUS_OUTAGE } from './actions';
+import Outages from './components/outages/outages';
 
 const initialState = { apis: {}, outages: [] };
 
@@ -27,9 +28,7 @@ const App = () => {
   return (
     <div>
       <h1>Statusaurus</h1>
-      <p>{`Current Outages(${state.outages.length}): [${state.outages.join(
-        ', '
-      )}]`}</p>
+      <Outages outages={state.outages} />
       {Object.keys(state.apis).map((apiName) => (
         <p key={apiName}>{apiName}</p>
       ))}
