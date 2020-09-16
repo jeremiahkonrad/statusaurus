@@ -1,3 +1,9 @@
+# Statusaurus
+
+https://jeremiahkonrad.github.io/statusaurus/
+
+A UI to help users quickly check the status of different APIs.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
