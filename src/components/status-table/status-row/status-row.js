@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TableRow = ({ api, status }) => {
+const StatusRow = ({ api, status }) => {
   const message = status?.message || 'outage';
   const hostname = status?.hostname || 'n/a';
   const time = status?.time || 'n/a';
@@ -15,4 +15,4 @@ const TableRow = ({ api, status }) => {
   );
 };
 
-export default TableRow;
+export default StatusRow;
