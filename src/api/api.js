@@ -1,5 +1,7 @@
+const funnelCors = (url) => `https://cors-anywhere.herokuapp.com/${url}`;
+
 const getApiEndpoint = (apiName) =>
-  `https://api.factoryfour.com/${apiName}/health/status`;
+  funnelCors(`https://api.factoryfour.com/${apiName}/health/status`);
 
 export const getStatus = (apiName) =>
   fetch(getApiEndpoint(apiName))
