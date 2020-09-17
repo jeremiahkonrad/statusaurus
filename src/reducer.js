@@ -24,7 +24,9 @@ const reducer = (state, action) => {
     case STATUS_OUTAGE:
       return {
         ...state,
-        outages: [...state.outages, apiName],
+        outages: state.outages.includes(apiName)
+          ? state.outages
+          : [...state.outages, apiName],
       };
 
     default:

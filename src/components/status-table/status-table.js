@@ -14,7 +14,7 @@ const StatusTable = ({ statuses }) => {
       </thead>
       <tbody>
         {Object.keys(statuses).map((apiName) => (
-          <StatusRow api={apiName} status={statuses[apiName]} />
+          <StatusRow api={apiName} status={statuses[apiName]} key={apiName} />
         ))}
       </tbody>
     </table>

@@ -20,3 +20,5 @@ export const API_LIST = [
 ];
 
 export const NO_CORS = ['messages', 'users'];
+
+export const INTERVAL_TO_CHECK_MS = 15000;
