@@ -27,8 +27,9 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <div className="statusaurus">
       <h1>Statusaurus</h1>
+      <h3>Quick glance at the statuses of our API</h3>
       <Outages outages={state.outages} />
       <StatusTable statuses={state.apis} />
     </div>

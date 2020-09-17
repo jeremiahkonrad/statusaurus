@@ -1,1 +1,44 @@
+.statusaurus {
+  margin: 0 auto;
+  max-width: 900px;
+}
+.status-table {
+  border: solid 4px black;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
 
+.status-table-header {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 24px;
+}
+
+tr {
+  opacity: 0.8;
+}
+
+tr:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.api-name {
+  font-style: italic;
+  font-size: 18px;
+}
+.api-up {
+  background-color: #b7e4c7;
+}
+
+.api-outage {
+  background-color: #fec3a6;
+}
+
+.outages {
+  background-color: #eec170;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  font-size: 12px;
+}

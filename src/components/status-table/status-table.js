@@ -3,8 +3,8 @@ import StatusRow from './status-row/status-row';
 
 const StatusTable = ({ statuses }) => {
   return (
-    <table>
-      <thead>
+    <table className="status-table">
+      <thead className="status-table-header">
         <tr>
           <td>API</td>
           <td>Time</td>
