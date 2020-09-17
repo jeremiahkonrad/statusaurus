@@ -5,7 +5,7 @@ import { API_LIST } from './constants';
 import reducer from './reducer';
 import { RECEIVED_STATUS, STATUS_OK, STATUS_OUTAGE } from './actions';
 import Outages from './components/outages/outages';
-import TableRow from './components/status-table/status-row/status-row';
+import StatusTable from './components/status-table/status-table';
 
 const initialState = { apis: {}, outages: [] };
 
@@ -32,26 +32,6 @@ const App = () => {
       <Outages outages={state.outages} />
       <StatusTable statuses={state.apis} />
     </div>
-  );
-};
-
-const StatusTable = ({ statuses }) => {
-  return (
-    <table>
-      <thead>
-        <tr>
-          <td>API</td>
-          <td>Time</td>
-          <td>Hostname</td>
-          <td>Message</td>
-        </tr>
-      </thead>
-      <tbody>
-        {Object.keys(statuses).map((apiName) => (
-          <TableRow api={apiName} status={statuses[apiName]} />
-        ))}
-      </tbody>
-    </table>
   );
 };
 

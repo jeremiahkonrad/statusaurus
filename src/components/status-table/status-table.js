@@ -1,5 +1,5 @@
 import React from 'react';
-import StatusRow from './status-row';
+import StatusRow from './status-row/status-row';
 
 const StatusTable = ({ statuses }) => {
   return (

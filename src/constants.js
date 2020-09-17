@@ -18,3 +18,5 @@ export const API_LIST = [
   'users',
   'workflows',
 ];
+
+export const NO_CORS = ['messages', 'users'];
