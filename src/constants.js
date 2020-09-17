@@ -18,3 +18,7 @@ export const API_LIST = [
   'users',
   'workflows',
 ];
+
+export const NO_CORS = ['messages', 'users'];
+
+export const INTERVAL_TO_CHECK_MS = 15000;
